@@ -7,8 +7,6 @@ function Image() {
 )
 }
 
-function PokemonCard() {
-
 const pokemonList = [
    {
      name: "bulbasaur",
@@ -19,18 +17,26 @@ const pokemonList = [
    },
  ];
 
+
+
+function PokemonCard() {
  const pokemon = pokemonList[0];
-
- return (
-   <div>
-      <figure>
-        {imgSrc && <img src={imgSrc} />}
-        {!imgSrc && <p>???</p>}
-        <figcaption>{name}</figcaption>
-      </figure>
-
-   </div>
- );
+ 
+ if (pokemon.imgSrc) {
+   return (
+     <figure>
+       <img src={pokemon.imgSrc}/>
+       <figcaption>{pokemon.name}</figcaption>
+     </figure>
+   );
+ } else {
+   return (
+     <figure>
+       <p>???</p>
+       <figcaption>{pokemon.name}</figcaption>
+     </figure>
+   );
+ }
 }
 
 export default Image;
