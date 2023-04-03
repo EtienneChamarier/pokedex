@@ -1,6 +1,8 @@
 import PokemonCard from "./components/PokemonCard";
 import Image from "./components/PokemonCard"
 
+
+
 function App() {
 
   return (
