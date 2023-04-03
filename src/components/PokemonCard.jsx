@@ -1,11 +1,15 @@
-function Image() {
- return (
- <figure>
-    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"></img>
-    <figcaption>bulbasaur</figcaption>
- </figure>
-)
-}
+function PokemonCard(props) {
+  const pokemon = pokemonList[0];
+  console.log(props)
+  return (
+    <figure>
+      <img src={props.pokemon.imgSrc} alt="???"/>
+      <figcaption>{props.pokemon.name}</figcaption>
+    </figure>
+  );
+  }
+ 
+
 
 const pokemonList = [
    {
@@ -19,17 +23,6 @@ const pokemonList = [
 
 
 
-function PokemonCard() {
- const pokemon = pokemonList[0];
- 
- return (
-   <figure>
-     <img src={pokemon.imgSrc} alt={pokemon.name} />
-     <figcaption>{pokemon.name}</figcaption>
-     {!pokemon.imgSrc && <p>???</p>}
-   </figure>
- );
 
- }
 
-export default Image;
+export default PokemonCard;
