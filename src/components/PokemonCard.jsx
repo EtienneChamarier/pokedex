@@ -1,11 +1,3 @@
-function Image() {
- return (
- <figure>
-    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"></img>
-    <figcaption>bulbasaur</figcaption>
- </figure>
-)
-}
 
 const pokemonList = [
    {
@@ -19,17 +11,20 @@ const pokemonList = [
 
 
 
-function PokemonCard() {
- const pokemon = pokemonList[0];
- 
+function PokemonCard() { 
+ const pokemon = pokemonList[1]; //création de la variable Pokemon//
+
+ // Figure = crée mon conteneur pour l'image et le nom du pokemon
+ // Figcaption = création la légende de l'image 
+ // img src = récupére l'image du pokemon est affiche "???" si jamais aucunes images ne s'affiche.
+
  return (
-   <figure>
-     <img src={pokemon.imgSrc} alt={pokemon.name} />
+   <figure> 
+     <img src={pokemon.imgSrc} alt="???" />
      <figcaption>{pokemon.name}</figcaption>
-     {!pokemon.imgSrc && <p>???</p>}
    </figure>
  );
 
  }
 
-export default Image;
+export default PokemonCard;
